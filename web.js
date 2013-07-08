@@ -6,10 +6,9 @@ var k = fs.readFileSync('index.html','utf8');
 
 var buf = new Buffer(k);
 
-/*console.log(buf);*/
 
 app.get('/', function(request, response) {
-  response.send(buf);
+  response.send(k);
 });
 
 var port = process.env.PORT || 5000;
